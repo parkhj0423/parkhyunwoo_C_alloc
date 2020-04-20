@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int sum = 0;
+	int n;
+	printf("n의 값을 입력하세요\n");
+	scanf("%d", &n);
+	int *arr = (int*)malloc(n*sizeof(int));
+	printf("%d\n", sizeof(*arr));
+
+	
+	for (int i = 0; i < n; i++) {
+		printf("값을 입력하세요 : \n");
+		scanf("%d", &arr[i]);
+		
+		if (arr[i] < 0) {
+			printf("음수값이 입력되었습니다. 종료합니다.\n");
+			
+			break;
+		}
+		sum += arr[i];
+	}
+	printf("sum : %d\n", sum);
+	free(arr);
+	
+}
