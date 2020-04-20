@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+void printNum()
+{
+	printf("5를 출력하였습니다.\n");
+}
+
+int main()
+{
+
+
+	void(*fprintNum)();
+	fprintNum = printNum;
+	fprintNum();
+	printf("%d\n", printNum);
+}
