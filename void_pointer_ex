@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void add(void*a,void*b,int type);
+
+
+
+
+int main()
+{
+
+
+	double dnum1 = 12.3;
+	double dnum2 = 12.4;
+	int inum1 = 10;
+	int inum2 = 20;
+	add(&dnum1,&dnum2,2);
+	add(&inum1, &inum2, 1);
+}
+
+
+
+void add(int a, int b, int type) {
+	int tmp;
+	double dtmp;
+	switch (type) {
+	case 1:
+		tmp =*(int*)a + *(int*)b;
+		printf("결과 값 : %d\n", tmp);
+		break;
+	case 2:
+		dtmp = *(double*)a + *(double*)b;
+		printf("결과 값 : %lf\n", dtmp);
+		break;
+	}
+}
