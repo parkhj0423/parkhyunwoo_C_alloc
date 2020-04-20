@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int num1 = 10;
+	int *pnum1 = &num1;
+	void* vpnum1;
+	vpnum1 = &num1;
+	printf("pnum1 = %d\n", *pnum1);
+	printf("vpnum1 = %d\n", *(int*)vpnum1);
+}
