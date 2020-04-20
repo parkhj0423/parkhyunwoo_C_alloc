@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+/*동적할당 (Dynamic Allocation)
+- 동적할당을 사용하기 위해서는 stdlib.h 헤더파일을 추가해야한다.
+- 동적할당시 할당되는 메모리는 heap 영역이다.
+- */
+int main()
+{
+	int *pNum1 = (int*)malloc(sizeof(int));
+
+	if (pNum1 == NULL) {
+		printf("동적할당 실패\n");
+		exit(1);
+	}
+	*pNum1 = 10;
+	printf("pNum1 출력 : %d\n", *pNum1);
+	printf("pNum1의 크기 : %d\n", sizeof(*pNum1));
+
+	free(pNum1);
+}
