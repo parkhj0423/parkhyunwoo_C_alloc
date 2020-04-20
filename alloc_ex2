@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct Menu {
+	int idx;
+	char name[50];
+	int price;
+}Menu;
+int main()
+{
+	Menu menu[] = { {1,"chocoIcecream",3000},
+	{2,"bananaIcecream",4000},
+	{3,"strawberryIcecream",5000},
+	{4,"mintIcecream",1000},
+	{5,"softIcecream",2000},
+	{6,"shootingIcecream",5600},
+	{7,"normalIcecream",8900},
+	{8,"lemonIcecream",1000},
+	{9,"peachIcecream",6700}};
+
+
+	int n;
+	int sum = 0;
+
+	printf("주문할 메뉴의 개수를 입력하세요\n");
+	scanf("%d", &n);
+	int *menu2 = (int*)malloc(n*sizeof(int));
+
+	for (int i = 0; i < n; i++) {
+		printf("메뉴를 선택해주세요 : \n");
+		scanf("%d", &menu2[i]);
+		if (menu2[i] < 0) {
+			break;
+		}
+		
+	}
+
+
+}
